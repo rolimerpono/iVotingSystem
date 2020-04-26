@@ -1,0 +1,3 @@
+﻿------ Build started: Project: iVotingSystem, Configuration: Debug x86 ------
+  iVotingSystem -> C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\iVotingSystem\bin\Debug\iVotingSystem.exe
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
