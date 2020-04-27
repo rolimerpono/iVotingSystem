@@ -34,14 +34,51 @@ namespace DataAccess
                 switch (sType)
                 {
                     case "ID":
-                        sQuery = "Select * from tbl_Party where ID Like '%" + sValue + "%' and status = 'ACTIVE'";
+                        sQuery = "Select * from tbl_Party where ID Like '%" + sValue + "%'";
                         break;
                     case "PARTY":
-                        sQuery = "Select * from tbl_Party where Party Like '%" + sValue + "%' and status = 'ACTIVE'";
+                        sQuery = "Select * from tbl_Party where Party Like '%" + sValue + "%'";
                         break;
                     case "INACTIVE":
                         sQuery = "Select * from tbl_Party where Party Like '%" + sValue + "%' and status = 'INACTIVE'";
                         break;
+                    default:
+                        sQuery = "Select * from tbl_Party where Party Like '%" + sValue + "%'";
+                        break;
+
+                }
+
+                ddq.CommandText = sQuery;
+                ds = ddq.GetDataset(CommandType.Text);
+
+                return ds.Tables.Count > 0 ? ds.Tables[0] : null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+        }
+
+
+        public DataTable getCandidateParty(string sType, string sValue)
+        {
+            try
+            {
+                osb.ConnectionString = sConnectionString;
+                ddq = new DatabaseQuery.DBQuery();
+                ddq.ConnectionString = osb.ConnectionString;
+
+                string sQuery = string.Empty;
+
+                switch (sType)
+                {
+                    case "ID":
+                        sQuery = "Select * from tbl_Party where ID Like '%" + sValue + "%' and status = 'ACTIVE'";
+                        break;
+                    case "PARTY":
+                        sQuery = "Select * from tbl_Party where Party Like '%" + sValue + "%' and status = 'ACTIVE'";
+                        break;              
                     default:
                         sQuery = "Select * from tbl_Party where Party Like '%" + sValue + "%' and status = 'ACTIVE'";
                         break;

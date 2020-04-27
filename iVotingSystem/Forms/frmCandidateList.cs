@@ -144,6 +144,16 @@ namespace iVotingSystem.Forms
             LoadCandidates();
         }
 
+        private void dgCandidates_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgCandidates.Rows.Count > 0)
+            {
+                oFrm = new frmCandidateEntry(this, oMCandidate);
+                oFrm.TransactionType = eVariable.TransactionType.EDIT;
+                oFrm.ShowDialog();
+            }
+        }
+
      
        
     }

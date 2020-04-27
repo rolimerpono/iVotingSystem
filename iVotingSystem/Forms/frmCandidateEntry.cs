@@ -34,15 +34,15 @@ namespace iVotingSystem.Forms
         public eVariable.TransactionType TransactionType;
         public frmCandidateEntry()
         {
-            InitializeComponent();            
-
+            InitializeComponent();
+            eVariable.DisablePanelTextKeyPress(pnlMain);  
         }
 
         public frmCandidateEntry(frmCandidateList oFrmCandidate)
         {
             InitializeComponent();
             oFrmCandidateList = oFrmCandidate;
-            eVariable.DisableTextPanelEnterKey(pnlMain);  
+            eVariable.DisablePanelTextKeyPress(pnlMain);  
         }
      
 
@@ -51,7 +51,7 @@ namespace iVotingSystem.Forms
             InitializeComponent();            
             oMCandidate = oData;
             oFrmCandidateList = oFrmCandidate;
-            eVariable.DisableTextPanelEnterKey(pnlMain);
+            eVariable.DisablePanelTextKeyPress(pnlMain);  
            
         }
 
@@ -182,7 +182,7 @@ namespace iVotingSystem.Forms
         {
             frmSearch oFrm = new frmSearch();
             oFrm.RecordType = frmSearch.RECORD_TYPE.STUDENT;
-            oFrm.ShowDialog();
+            oFrm.ShowDialog();            
             if (oFrm.oMStudent.UNIQUE_ID != null)
             {
                 eVariable.sID = oFrm.oMStudent.UNIQUE_ID;

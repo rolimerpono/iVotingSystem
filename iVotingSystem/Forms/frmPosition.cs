@@ -138,6 +138,17 @@ namespace iVotingSystem.Forms
             Close();
         }
 
+        private void dgPosition_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (oMPosition.ID.Trim() != String.Empty)
+            {
+                eVariable.sID = oMPosition.ID;
+                tbxPosition.Text = oMPosition.POSITION;
+                chkStatus.Checked = oMPosition.STATUS == "ACTIVE" ? true : false;
+                TransactionType = eVariable.TransactionType.EDIT;
+            }
+        }
+
         
     }
 }

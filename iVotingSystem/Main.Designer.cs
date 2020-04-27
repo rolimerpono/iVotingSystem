@@ -71,7 +71,6 @@
             this.btnReports = new System.Windows.Forms.Button();
             this.btnImportData = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnVotersPass = new System.Windows.Forms.Button();
             this.pnlSide.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -577,12 +576,11 @@
             // pnlRSubMenu
             // 
             this.pnlRSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
-            this.pnlRSubMenu.Controls.Add(this.btnVotersPass);
             this.pnlRSubMenu.Controls.Add(this.button1);
             this.pnlRSubMenu.Controls.Add(this.btnRecordList);
             this.pnlRSubMenu.Location = new System.Drawing.Point(271, 137);
             this.pnlRSubMenu.Name = "pnlRSubMenu";
-            this.pnlRSubMenu.Size = new System.Drawing.Size(159, 111);
+            this.pnlRSubMenu.Size = new System.Drawing.Size(159, 74);
             this.pnlRSubMenu.TabIndex = 14;
             this.pnlRSubMenu.Visible = false;
             // 
@@ -670,24 +668,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnVotersPass
-            // 
-            this.btnVotersPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVotersPass.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVotersPass.FlatAppearance.BorderSize = 0;
-            this.btnVotersPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVotersPass.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVotersPass.ForeColor = System.Drawing.Color.LightGray;
-            this.btnVotersPass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVotersPass.Location = new System.Drawing.Point(0, 74);
-            this.btnVotersPass.Name = "btnVotersPass";
-            this.btnVotersPass.Size = new System.Drawing.Size(159, 37);
-            this.btnVotersPass.TabIndex = 18;
-            this.btnVotersPass.Text = "     Voters Key";
-            this.btnVotersPass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVotersPass.UseVisualStyleBackColor = true;
-            this.btnVotersPass.Click += new System.EventHandler(this.btnVotersPass_Click);
-            // 
             // MAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -761,7 +741,6 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnImportData;
-        private System.Windows.Forms.Button btnVotersPass;
         private System.Windows.Forms.Button button1;
     }
 }

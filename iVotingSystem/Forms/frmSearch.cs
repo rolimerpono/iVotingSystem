@@ -63,7 +63,7 @@ namespace iVotingSystem.Forms
                     oPosition = new DataAccess.Position();
                     dgDetails.Rows.Clear();
 
-                    foreach (DataRow row in oPosition.getPosition(cboSearch.Text, txtSearch.Text).Rows)
+                    foreach (DataRow row in oPosition.getCandidatePosition(cboSearch.Text, txtSearch.Text).Rows)
                     {
                         dgDetails.Rows.Add(row[0], row[1]);
                     }
@@ -74,7 +74,7 @@ namespace iVotingSystem.Forms
                     oParty = new DataAccess.Party();
                     dgDetails.Rows.Clear();
 
-                    foreach (DataRow row in oParty.getParty(cboSearch.Text, txtSearch.Text).Rows)
+                    foreach (DataRow row in oParty.getCandidateParty(cboSearch.Text, txtSearch.Text).Rows)
                     {
                         dgDetails.Rows.Add(row[0], row[1]);
                     }

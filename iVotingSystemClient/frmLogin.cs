@@ -60,6 +60,7 @@ namespace iVotingSystemClient
                         return;
                     }
 
+                    this.ShowInTaskbar = false;
                     this.Hide();
                     oMainForm = new MAIN(txtUsername.Text,txtPassword.Text);
                     oMainForm.ShowDialog();

@@ -36,12 +36,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgCandidates = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblTotalRecords = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.cboSearchBy = new System.Windows.Forms.ComboBox();
-            this.tbxSearch = new System.Windows.Forms.TextBox();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +52,12 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalRecords = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cboSearchBy = new System.Windows.Forms.ComboBox();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCandidates)).BeginInit();
             this.panel1.SuspendLayout();
@@ -185,86 +185,8 @@
             this.dgCandidates.Size = new System.Drawing.Size(830, 431);
             this.dgCandidates.TabIndex = 5;
             this.dgCandidates.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCandidates_CellClick);
+            this.dgCandidates.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCandidates_CellDoubleClick);
             this.dgCandidates.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCandidates_CellEnter);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblTotalRecords);
-            this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.cboSearchBy);
-            this.panel1.Controls.Add(this.tbxSearch);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 431);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 32);
-            this.panel1.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(654, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "TOTAL RECORD(s) : ";
-            // 
-            // lblTotalRecords
-            // 
-            this.lblTotalRecords.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalRecords.AutoSize = true;
-            this.lblTotalRecords.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblTotalRecords.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalRecords.ForeColor = System.Drawing.Color.White;
-            this.lblTotalRecords.Location = new System.Drawing.Point(784, 10);
-            this.lblTotalRecords.Name = "lblTotalRecords";
-            this.lblTotalRecords.Size = new System.Drawing.Size(34, 13);
-            this.lblTotalRecords.TabIndex = 29;
-            this.lblTotalRecords.Text = "###";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSearch.Location = new System.Drawing.Point(559, 4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(85, 24);
-            this.btnSearch.TabIndex = 28;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // cboSearchBy
-            // 
-            this.cboSearchBy.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSearchBy.FormattingEnabled = true;
-            this.cboSearchBy.Items.AddRange(new object[] {
-            "CANDIDATE ID",
-            "FIRST NAME",
-            "LAST NAME"});
-            this.cboSearchBy.Location = new System.Drawing.Point(7, 5);
-            this.cboSearchBy.Name = "cboSearchBy";
-            this.cboSearchBy.Size = new System.Drawing.Size(144, 22);
-            this.cboSearchBy.TabIndex = 27;
-            this.cboSearchBy.Text = "CANDIDATE ID";
-            this.cboSearchBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboSearchBy_KeyPress);
-            // 
-            // tbxSearch
-            // 
-            this.tbxSearch.BackColor = System.Drawing.Color.White;
-            this.tbxSearch.Location = new System.Drawing.Point(154, 4);
-            this.tbxSearch.Multiline = true;
-            this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(400, 24);
-            this.tbxSearch.TabIndex = 26;
-            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // Column9
             // 
@@ -379,6 +301,85 @@
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
             this.Column16.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblTotalRecords);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.cboSearchBy);
+            this.panel1.Controls.Add(this.tbxSearch);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 431);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(830, 32);
+            this.panel1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(654, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "TOTAL RECORD(s) : ";
+            // 
+            // lblTotalRecords
+            // 
+            this.lblTotalRecords.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalRecords.AutoSize = true;
+            this.lblTotalRecords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTotalRecords.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalRecords.ForeColor = System.Drawing.Color.White;
+            this.lblTotalRecords.Location = new System.Drawing.Point(784, 10);
+            this.lblTotalRecords.Name = "lblTotalRecords";
+            this.lblTotalRecords.Size = new System.Drawing.Size(34, 13);
+            this.lblTotalRecords.TabIndex = 29;
+            this.lblTotalRecords.Text = "###";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSearch.Location = new System.Drawing.Point(559, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(85, 24);
+            this.btnSearch.TabIndex = 28;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // cboSearchBy
+            // 
+            this.cboSearchBy.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSearchBy.FormattingEnabled = true;
+            this.cboSearchBy.Items.AddRange(new object[] {
+            "CANDIDATE ID",
+            "FIRST NAME",
+            "LAST NAME"});
+            this.cboSearchBy.Location = new System.Drawing.Point(7, 5);
+            this.cboSearchBy.Name = "cboSearchBy";
+            this.cboSearchBy.Size = new System.Drawing.Size(144, 22);
+            this.cboSearchBy.TabIndex = 27;
+            this.cboSearchBy.Text = "CANDIDATE ID";
+            this.cboSearchBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboSearchBy_KeyPress);
+            // 
+            // tbxSearch
+            // 
+            this.tbxSearch.BackColor = System.Drawing.Color.White;
+            this.tbxSearch.Location = new System.Drawing.Point(154, 4);
+            this.tbxSearch.Multiline = true;
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(400, 24);
+            this.tbxSearch.TabIndex = 26;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // frmCandidateList
             // 

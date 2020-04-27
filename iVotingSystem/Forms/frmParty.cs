@@ -155,5 +155,16 @@ namespace iVotingSystem.Forms
         {
 
         }
+
+        private void dgParty_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (oMParty.ID.Trim() != String.Empty)
+            {
+                eVariable.sID = oMParty.ID;
+                txtParty.Text = oMParty.PARTY;
+                chkStatus.Checked = oMParty.STATUS == "ACTIVE" ? true : false;
+                TransactionType = eVariable.TransactionType.EDIT;
+            }
+        }
     }
 }

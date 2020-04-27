@@ -34,14 +34,50 @@ namespace DataAccess
                 switch (sType)
                 {
                     case "ID":
-                        sQuery = "Select * from tbl_Position where ID LIKE '%" + sValue + "%' and status = 'ACTIVE'";
+                        sQuery = "Select * from tbl_Position where ID LIKE '%" + sValue + "%'";
                         break;
                     case "POSITION":
-                        sQuery = "Select * from tbl_Position where Position LIKE '%" + sValue + "5' and status = 'ACTIVE'";
+                        sQuery = "Select * from tbl_Position where Position LIKE '%" + sValue + "%'";
                         break;
                     case "INACTIVE":
                         sQuery = "Select * from tbl_Position where Position Like '%" + sValue + "%' and status = 'INACTIVE'";
                         break;
+                    default:
+                        sQuery = "Select * from tbl_Position where Position Like '%" + sValue + "%'";
+                        break;
+
+                }
+
+                ddq.CommandText = sQuery;
+                ds = ddq.GetDataset(CommandType.Text);
+
+                return ds.Tables.Count > 0 ? ds.Tables[0] : null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+        }
+
+        public DataTable getCandidatePosition(string sType, string sValue)
+        {
+            try
+            {
+                osb.ConnectionString = sConnectionString;
+                ddq = new DatabaseQuery.DBQuery();
+                ddq.ConnectionString = osb.ConnectionString;
+
+                string sQuery = String.Empty;
+
+                switch (sType)
+                {
+                    case "ID":
+                        sQuery = "Select * from tbl_Position where ID LIKE '%" + sValue + "%' and status = 'ACTIVE'";
+                        break;
+                    case "POSITION":
+                        sQuery = "Select * from tbl_Position where Position LIKE '%" + sValue + "5' and status = 'ACTIVE'";
+                        break; 
                     default:
                         sQuery = "Select * from tbl_Position where Position Like '%" + sValue + "%' and status = 'ACTIVE'";
                         break;

@@ -1,0 +1,10 @@
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\bin\Debug\DatabaseQuery.dll
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\bin\Debug\ePublicVariable.dll
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\bin\Debug\Model.dll
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\bin\Debug\ePublicVariable.pdb
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\bin\Debug\Model.pdb
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\DataAccess\obj\Debug\DataAccess.pdb

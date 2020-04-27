@@ -48,7 +48,7 @@
             this.pnlBody.Controls.Add(this.pnlBottom);
             this.pnlBody.Location = new System.Drawing.Point(2, 2);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(321, 142);
+            this.pnlBody.Size = new System.Drawing.Size(364, 142);
             this.pnlBody.TabIndex = 2;
             // 
             // lblMessage
@@ -59,17 +59,17 @@
             this.lblMessage.ForeColor = System.Drawing.Color.Black;
             this.lblMessage.Location = new System.Drawing.Point(3, 32);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(317, 70);
+            this.lblMessage.Size = new System.Drawing.Size(358, 72);
             this.lblMessage.TabIndex = 55;
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(321, 30);
+            this.pnlHeader.Size = new System.Drawing.Size(364, 30);
             this.pnlHeader.TabIndex = 50;
             // 
             // lblTitle
@@ -79,7 +79,7 @@
             this.lblTitle.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblTitle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(5, 8);
+            this.lblTitle.Location = new System.Drawing.Point(1, 8);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(63, 13);
             this.lblTitle.TabIndex = 6;
@@ -87,13 +87,13 @@
             // 
             // pnlBottom
             // 
-            this.pnlBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.pnlBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.pnlBottom.Controls.Add(this.btnLeft);
             this.pnlBottom.Controls.Add(this.btnRight);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBottom.Location = new System.Drawing.Point(0, 106);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(321, 36);
+            this.pnlBottom.Size = new System.Drawing.Size(364, 36);
             this.pnlBottom.TabIndex = 48;
             // 
             // btnLeft
@@ -102,7 +102,7 @@
             this.btnLeft.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLeft.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLeft.Location = new System.Drawing.Point(233, 6);
+            this.btnLeft.Location = new System.Drawing.Point(279, 6);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(80, 24);
             this.btnLeft.TabIndex = 5;
@@ -112,11 +112,11 @@
             // 
             // btnRight
             // 
-            this.btnRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.btnRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRight.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRight.Location = new System.Drawing.Point(147, 6);
+            this.btnRight.Location = new System.Drawing.Point(193, 6);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(84, 24);
             this.btnRight.TabIndex = 4;
@@ -128,8 +128,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(216)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(325, 146);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(217)))), ((int)(((byte)(178)))));
+            this.ClientSize = new System.Drawing.Size(369, 146);
             this.Controls.Add(this.pnlBody);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

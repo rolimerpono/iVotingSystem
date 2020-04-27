@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
+using ePublicVariable;
 namespace iVotingSystem.Reports
 {
     public partial class frmRecordList : Form
@@ -18,6 +19,7 @@ namespace iVotingSystem.Reports
         public frmRecordList()
         {
             InitializeComponent();
+            eVariable.DisableKeyPress(txtElectionCode);
         }
        
         private void frmReports_Load(object sender, EventArgs e)
@@ -31,6 +33,15 @@ namespace iVotingSystem.Reports
     
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            if (txtElectionCode.Text.Trim() == string.Empty && cboSearch.Text != "STUDENT LIST")
+            {
+                Forms.frmMessageBox oFrm = new Forms.frmMessageBox("ELECTION CODE NUMBER IS REQUIRED IN THIS REPORT");
+                oFrm.MessageType = Forms.frmMessageBox.MESSAGE_TYPE.INFO;
+                oFrm.ShowDialog();
+                txtElectionCode.Focus();
+                return;
+            }
+
             switch (cboSearch.Text)
             { 
                 case "STUDENT LIST":
@@ -38,7 +49,7 @@ namespace iVotingSystem.Reports
                     LoadStudents();
                     break;
                 case "CANDIDATE LIST":
-                    sReportName = "rptCandidateList.rdlc";
+                    sReportName = "rptCandidateList.rdlc";                    
                     LoadCandidates();
                     break;    
                 case "VOTE RESULT":
@@ -49,7 +60,9 @@ namespace iVotingSystem.Reports
                     sReportName = "rptResult.rdlc";
                     ElectionWinner();
                     break;  
-            }      
+            }
+
+           
         }
  
         void LoadStudents()

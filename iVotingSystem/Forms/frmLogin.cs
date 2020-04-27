@@ -78,8 +78,9 @@ namespace iVotingSystem.Forms
                 #region DBLogin
                 if (oUser.IsLogin(txtUsername.Text.Trim(), txtPassword.Text.Trim()))
                 {
-                    this.Hide();
+                    
                     this.ShowInTaskbar = false;
+                    this.Hide();
                     ePublicVariable.eVariable.sUsername = txtUsername.Text;
                     ePublicVariable.eVariable.sPassword = txtPassword.Text;
                     oMainForm = new MAIN();

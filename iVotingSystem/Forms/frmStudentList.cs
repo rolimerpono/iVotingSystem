@@ -148,6 +148,19 @@ namespace iVotingSystem.Forms
             LoadStudents();
         }
 
+        private void dgStudents_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgStudents.Rows.Count > 0)
+            {
+                if (dgStudents.SelectedCells[0].Selected == true)
+                {
+                    oFrm = new frmStudentEntry(this, oMStudent);
+                    oFrm.TransactionType = ePublicVariable.eVariable.TransactionType.EDIT;
+                    oFrm.ShowDialog();
+                }
+            }
+        }
+
 
     
        

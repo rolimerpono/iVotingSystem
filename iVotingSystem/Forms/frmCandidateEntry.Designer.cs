@@ -396,12 +396,12 @@
             this.lblElectionNo.AutoSize = true;
             this.lblElectionNo.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblElectionNo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElectionNo.ForeColor = System.Drawing.Color.White;
-            this.lblElectionNo.Location = new System.Drawing.Point(151, 7);
+            this.lblElectionNo.ForeColor = System.Drawing.Color.Lime;
+            this.lblElectionNo.Location = new System.Drawing.Point(146, 6);
             this.lblElectionNo.Name = "lblElectionNo";
-            this.lblElectionNo.Size = new System.Drawing.Size(88, 13);
+            this.lblElectionNo.Size = new System.Drawing.Size(87, 13);
             this.lblElectionNo.TabIndex = 8;
-            this.lblElectionNo.Text = "2020-ABCDD";
+            this.lblElectionNo.Text = "2020-ABCDE";
             // 
             // lblTitle
             // 

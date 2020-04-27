@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.IO;
 using ePublicVariable;
+using System.Text.RegularExpressions;
 
 namespace DataAccess
 {
@@ -81,16 +82,16 @@ namespace DataAccess
                 {
 
                     case "STUDENT ID":
-                        sQuery = "SELECT * FROM TBL_STUDENTS WHERE STUDENT_ID Like '%" + sValue + "%' and status = 'ACTIVE'";
+                        sQuery = "SELECT * FROM TBL_STUDENTS WHERE STUDENT_ID Like '%" + sValue + "%' and status = 'ACTIVE' and Student_ID not in (Select Candidate_ID from tbl_Candidates where status = 'ACTIVE')";
                         break;
                     case "FIRST NAME":
-                        sQuery = "SELECT * FROM TBL_STUDENTS WHERE FIRST_NAME Like '%" + sValue + "%' and status = 'ACTIVE'";
+                        sQuery = "SELECT * FROM TBL_STUDENTS WHERE FIRST_NAME Like '%" + sValue + "%' and status = 'ACTIVE' and Student_ID not in (Select Candidate_ID from tbl_Candidates where status = 'ACTIVE')";
                         break;
                     case "MIDDLE NAME":
-                        sQuery = "SELECT * FROM TBL_STUDENTS WHERE MIDDLE_NAME Like '%" + sValue + "%' and status = 'ACTIVE'";
+                        sQuery = "SELECT * FROM TBL_STUDENTS WHERE MIDDLE_NAME Like '%" + sValue + "%' and status = 'ACTIVE' and Student_ID not in (Select Candidate_ID from tbl_Candidates where status = 'ACTIVE')";
                         break;
                     case "LAST NAME":
-                        sQuery = "SELECT * FROM TBL_STUDENTS WHERE LAST_NAME Like '%" + sValue + "%' and status = 'ACTIVE'";
+                        sQuery = "SELECT * FROM TBL_STUDENTS WHERE LAST_NAME Like '%" + sValue + "%' and status = 'ACTIVE' and Student_ID not in (Select Candidate_ID from tbl_Candidates where status = 'ACTIVE')";
                         break;
                     case "INACTIVE":
                         sQuery = "Select * from tbl_Students where status = 'INACTIVE'";
@@ -109,7 +110,6 @@ namespace DataAccess
             catch (Exception ex)
             {
                 throw ex;
-
             }
         }
 
@@ -189,6 +189,26 @@ namespace DataAccess
 
             }
 
+        }
+
+        private int GetStudentNo()
+        {
+            osb.ConnectionString = sConnectionString;
+            ddq = new DatabaseQuery.DBQuery();
+            ddq.ConnectionString = osb.ConnectionString;
+            
+
+            ddq.CommandText = "SELECT TOP 1 STUDENT_ID FROM TBL_STUDENTS ORDER BY STUDENT_ID DESC";
+            ds = ddq.GetDataset(CommandType.Text);
+
+            return ds.Tables[0].Rows.Count > 0 ? Convert.ToInt32(Regex.Replace(ds.Tables[0].Rows[0][0].ToString(), "[^0-9]", "")) : 0;
+        }
+
+        public string GetStudentAutoNo()
+        { 
+            int iNo = 0;
+            iNo = GetStudentNo() + 1;
+            return "STUD-" + iNo.ToString("0000#");
         }
 
         public List<Model.Student> RetrieveCSVData(string sPath)

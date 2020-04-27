@@ -28,6 +28,7 @@ namespace iVotingSystem.Forms
         {
             InitializeComponent();
             eVariable.DisableTextPanelEnterKey(pnlMain);
+            eVariable.ValidNumber(txtContactNo);
         }
 
         public frmStudentEntry(frmStudentList oFrmStudent, Model.Student oData)
@@ -35,8 +36,9 @@ namespace iVotingSystem.Forms
             InitializeComponent();
             
             oMStudent = oData;
-            this.oFrmStudents = oFrmStudent;            
-            eVariable.DisableTextEnterKey(pnlMain);
+            this.oFrmStudents = oFrmStudent;
+            eVariable.DisableTextPanelEnterKey(pnlMain);
+            eVariable.ValidNumber(txtContactNo);
 
         }
 
@@ -74,8 +76,19 @@ namespace iVotingSystem.Forms
    
         private void frmStudentEntry_Load(object sender, EventArgs e)
         {
+            oStudent = new DataAccess.Student();
             LoadStudents();
             txtStudentID.Focus();
+            if (TransactionType == eVariable.TransactionType.ADD)
+            {
+                txtStudentID.Enabled = false;
+                txtStudentID.Text = oStudent.GetStudentAutoNo();
+            }
+            else
+            {
+                txtStudentID.Enabled = false;
+                chkAutoNumber.Enabled = false;
+            }
         }       
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -150,6 +163,22 @@ namespace iVotingSystem.Forms
         private void dtDOB_ValueChanged(object sender, EventArgs e)
         {
             txtAge.Text = eVariable.GetAge(dtDOB.Value.Date,DateTime.Now.Date).ToString();
+        }
+
+        private void chkAutoNumber_Click(object sender, EventArgs e)
+        {
+            oStudent = new DataAccess.Student();
+
+            if (chkAutoNumber.Checked)
+            {
+                txtStudentID.Enabled = false;
+                txtStudentID.Text = oStudent.GetStudentAutoNo();
+            }
+            else
+            {
+                txtStudentID.Enabled = true;
+                txtStudentID.Text = "";
+            }
         }
        
     }
