@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN));
             this.pnlSide = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnReports = new System.Windows.Forms.Button();
             this.btnUtility = new System.Windows.Forms.Button();
             this.btnParty = new System.Windows.Forms.Button();
             this.btnLock = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pnlUSubMenu = new System.Windows.Forms.Panel();
+            this.btnImportData = new System.Windows.Forms.Button();
             this.btnUserAccount = new System.Windows.Forms.Button();
             this.btnUVotersPass = new System.Windows.Forms.Button();
             this.btnElectionSched = new System.Windows.Forms.Button();
@@ -66,11 +68,9 @@
             this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pnlRSubMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnRecordList = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.btnImportData = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlSide.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -109,6 +109,24 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(159, 543);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // btnReports
+            // 
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.LightGray;
+            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.Location = new System.Drawing.Point(0, 222);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(159, 37);
+            this.btnReports.TabIndex = 12;
+            this.btnReports.Text = "        Reports          +";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnUtility
             // 
@@ -463,6 +481,24 @@
             this.pnlUSubMenu.TabIndex = 13;
             this.pnlUSubMenu.Visible = false;
             // 
+            // btnImportData
+            // 
+            this.btnImportData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnImportData.FlatAppearance.BorderSize = 0;
+            this.btnImportData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportData.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportData.ForeColor = System.Drawing.Color.LightGray;
+            this.btnImportData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportData.Location = new System.Drawing.Point(0, 111);
+            this.btnImportData.Name = "btnImportData";
+            this.btnImportData.Size = new System.Drawing.Size(159, 37);
+            this.btnImportData.TabIndex = 30;
+            this.btnImportData.Text = "     Import/Export";
+            this.btnImportData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportData.UseVisualStyleBackColor = true;
+            this.btnImportData.Click += new System.EventHandler(this.btnImportData_Click);
+            // 
             // btnUserAccount
             // 
             this.btnUserAccount.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -584,6 +620,24 @@
             this.pnlRSubMenu.TabIndex = 14;
             this.pnlRSubMenu.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.LightGray;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 37);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "     Election Code List";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // btnRecordList
             // 
             this.btnRecordList.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -615,58 +669,6 @@
             this.pnlMain.Size = new System.Drawing.Size(1195, 657);
             this.pnlMain.TabIndex = 7;
             this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
-            // 
-            // btnReports
-            // 
-            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.LightGray;
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 222);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(159, 37);
-            this.btnReports.TabIndex = 12;
-            this.btnReports.Text = "        Reports          +";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = true;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
-            // 
-            // btnImportData
-            // 
-            this.btnImportData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImportData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnImportData.FlatAppearance.BorderSize = 0;
-            this.btnImportData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportData.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportData.ForeColor = System.Drawing.Color.LightGray;
-            this.btnImportData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportData.Location = new System.Drawing.Point(0, 111);
-            this.btnImportData.Name = "btnImportData";
-            this.btnImportData.Size = new System.Drawing.Size(159, 37);
-            this.btnImportData.TabIndex = 30;
-            this.btnImportData.Text = "     Import/Export";
-            this.btnImportData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportData.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 37);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "     Election Code List";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // MAIN
             // 

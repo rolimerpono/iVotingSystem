@@ -21,53 +21,10 @@ namespace iVotingSystem.Forms
         public frmUser()
         {
             InitializeComponent();
-            eVariable.DisableTextPanelEnterKey(pnlInfo);
+            eVariable.DisableTextPanelEnterKey(pnlUser);
         }
 
-        private void txtStudentID_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtContactNo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblClose_Click(object sender, EventArgs e)
         {
@@ -97,7 +54,7 @@ namespace iVotingSystem.Forms
             oUser = new DataAccess.User();
             oMUser = new Model.User();
 
-            foreach (var o in pnlInfo.Controls.OfType<TextBox>().ToList())
+            foreach (var o in pnlUser.Controls.OfType<TextBox>().ToList())
             {
                 if (o.Text.Trim() == String.Empty)
                 {
@@ -156,7 +113,7 @@ namespace iVotingSystem.Forms
 
         void ClearFields()
         {
-            foreach (var o in pnlInfo.Controls.OfType<TextBox>().ToList())
+            foreach (var o in pnlUser.Controls.OfType<TextBox>().ToList())
             {
                 o.Text = string.Empty;
             }

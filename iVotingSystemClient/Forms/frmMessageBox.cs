@@ -16,12 +16,14 @@ namespace iVotingSystemClient.Forms
         public frmMessageBox()
         {
             InitializeComponent();
+            MessageType = MESSAGE_TYPE.INFO;
         }
 
         public frmMessageBox(string sMsg)
         {
             InitializeComponent();
             sMessage = sMsg;
+            MessageType = MESSAGE_TYPE.INFO;
         }
 
         public enum MESSAGE_TYPE : int

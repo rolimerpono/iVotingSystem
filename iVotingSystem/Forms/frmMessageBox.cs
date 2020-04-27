@@ -13,15 +13,19 @@ namespace iVotingSystem.Forms
     {
         public string sAnswer = string.Empty;
         private string sMessage = string.Empty;
+
+        
         public frmMessageBox()
         {
             InitializeComponent();
+            MessageType = MESSAGE_TYPE.INFO;
         }
-
         public frmMessageBox(string sMsg)
         {
             InitializeComponent();
             sMessage = sMsg;
+            MessageType = MESSAGE_TYPE.INFO;
+            
         }
 
         public enum MESSAGE_TYPE : int
