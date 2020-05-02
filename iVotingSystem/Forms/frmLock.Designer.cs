@@ -30,11 +30,11 @@
         {
             this.pnlBody = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblCurrentDate = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCurrentDate = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlBody.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -54,12 +54,50 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(556, 13);
             this.panel2.TabIndex = 106;
+            // 
+            // btnOk
+            // 
+            this.btnOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.btnOk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOk.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnOk.Location = new System.Drawing.Point(473, 33);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(79, 26);
+            this.btnOk.TabIndex = 104;
+            this.btnOk.Text = "UNLOCK";
+            this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(5, 35);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(461, 23);
+            this.txtPassword.TabIndex = 103;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblCurrentDate);
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(556, 30);
+            this.panel1.TabIndex = 105;
             // 
             // label2
             // 
@@ -86,44 +124,6 @@
             this.lblCurrentDate.Size = new System.Drawing.Size(143, 13);
             this.lblCurrentDate.TabIndex = 11;
             this.lblCurrentDate.Text = "2020-02-20 9:00:05 AM";
-            // 
-            // btnOk
-            // 
-            this.btnOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btnOk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOk.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnOk.Location = new System.Drawing.Point(473, 33);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(79, 26);
-            this.btnOk.TabIndex = 104;
-            this.btnOk.Text = "UNLOCK";
-            this.btnOk.UseVisualStyleBackColor = false;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.BackColor = System.Drawing.Color.White;
-            this.txtPassword.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(5, 35);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(461, 23);
-            this.txtPassword.TabIndex = 103;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblCurrentDate);
-            this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 30);
-            this.panel1.TabIndex = 105;
             // 
             // lblTitle
             // 
