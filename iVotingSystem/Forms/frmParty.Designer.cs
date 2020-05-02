@@ -211,6 +211,7 @@
             // chkStatus
             // 
             this.chkStatus.AutoSize = true;
+            this.chkStatus.Enabled = false;
             this.chkStatus.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkStatus.ForeColor = System.Drawing.Color.White;
             this.chkStatus.Location = new System.Drawing.Point(645, 9);

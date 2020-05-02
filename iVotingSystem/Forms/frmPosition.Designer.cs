@@ -251,6 +251,7 @@
             this.ClientSize = new System.Drawing.Size(739, 386);
             this.ControlBox = false;
             this.Controls.Add(this.pnlPos);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
