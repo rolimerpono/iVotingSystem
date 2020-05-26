@@ -35,3 +35,4 @@ C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\iVotingSystem
 C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\iVotingSystem\obj\x86\Debug\RdlCompile.compiled
 C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\iVotingSystem\obj\x86\Debug\iVotingSystem.exe
 C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystem\iVotingSystem\obj\x86\Debug\iVotingSystem.pdb
+C:\Users\ROLLY\Documents\Visual Studio 2010\Projects\iVotingSystemX\iVotingSystem\bin\Debug\iVotingSystem.exe.config
